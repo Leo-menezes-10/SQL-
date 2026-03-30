@@ -67,3 +67,61 @@ print("Hello World")
 ## Task List
 - [x] Done task
 - [ ] Pending task
+
+
+
+
+
+#schema diagram-
+# Database Schema Diagram
+
+## Schema Diagram
+
+```
++-------------------+
+|      STUDENTS     |
++-------------------+
+| id (PK)           |
+| name              |
+| age               |
+| email             |
++-------------------+
+          |
+          | FK
+          v
++-------------------+
+|    ENROLLMENT     |
++-------------------+
+| enroll_id (PK)    |
+| student_id (FK)   |
+| course_id (FK)    |
++-------------------+
+          |
+          | FK
+          v
++-------------------+
+|      COURSES      |
++-------------------+
+| course_id (PK)    |
+| course_name       |
+| duration          |
++-------------------+
+```
+
+## Tables Description
+
+### Students Table
+- id → Primary Key
+- name → Student Name
+- age → Student Age
+- email → Student Email
+
+### Courses Table
+- course_id → Primary Key
+- course_name → Course Name
+- duration → Course Duration
+
+### Enrollment Table
+- enroll_id → Primary Key
+- student_id → Foreign Key
+- course_id → Foreign Key
